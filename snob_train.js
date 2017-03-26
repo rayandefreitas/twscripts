@@ -4,5 +4,5 @@
 var checkid=($('a[href*="action=logout"]:first').attr('href').match(/[\?|\&]h\=(\w+)/)||['',''])[1];
 if(typeof building == 'undefined')var building = '&action=train&h='+checkid;
 $('tr:not(:first) td span a').each(function(i,e){
-  e.href = e.href.replace('&screen=overview','&snob=' + building);
+  e.href = e.href.replace('&screen=snob','&screen=' + building);
 });
